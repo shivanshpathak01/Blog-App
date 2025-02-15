@@ -9,7 +9,7 @@ export default function Button({
     ...props    /*Basically for all the properties that a user can pass*/ 
 }) {
     return (
-        <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}> /* If a user is giving more peoperties then we have already added props */
+        <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}> 
             {children}
         </button>
     );

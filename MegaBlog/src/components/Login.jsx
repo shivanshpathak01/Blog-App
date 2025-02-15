@@ -19,7 +19,7 @@ function Login() {
             if (session) {
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData));
-                navigate("/")   /* If we have used Link here, we need to click */
+                navigate("/")   
             }
         } catch (error) {
             setError(error.message)
@@ -48,7 +48,6 @@ function Login() {
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         <form onSubmit={handleSubmit(login)} className='mt-8'>  
-            /* handleSubmit is an event so we have to use another name of the function that is handling the submit thing */
             <div className='space-y-5'>
                 <Input
                 label="Email: "
